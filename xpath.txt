@@ -1,0 +1,10 @@
+        self.xpaths = {
+            'news_list': '//*[@id="news-screener-page"]/div/div/div/div[1]/div/div[2]/div[2]/div[2]/div',  # 新聞列表容器的XPATH
+            'news_items': '//*[@id="news-screener-page"]/div/div/div/div[1]/div/div[2]/div[2]/div[2]/div/a',  # 新聞項目的XPATH（可點擊的連結）
+            'right_panel': '//*[@id="news-screener-page"]/div/div/div/div[3]',  # 右側面板的XPATH
+            'panel_title': '//*[@id="news-screener-page"]/div/div/div/div[3]/div/div/div/div/article/h2',  # 右側面板標題的XPATH
+            'panel_content': '//*[@id="news-screener-page"]/div/div/div/div[3]/div/div/div/div/article/div[3]/div/div[1]/div[2]/span',  # 右側面板內容的XPATH
+            'panel_symbols': '//*[@id="news-screener-page"]/div/div/div/div[3]/div/div/div/div/article/div[3]/div/div[1]/div[1]',  # 右側面板符號的XPATH
+            'close_button': '',  # 關閉按鈕的XPATH（可選）
+            'list_title': '//*[@id="news-screener-page"]/div/div/div/div[1]/div/div[2]/div[2]/div[2]/div/a[1]/article/div/div'  # 列表中標題的XPATH（相對於news_items）
+        }
