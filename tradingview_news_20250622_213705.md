@@ -1,12 +1,75 @@
 # TradingView BTCUSDT 新聞報告
-**爬取時間**: 2025-06-22 21:03:35
+**爬取時間**: 2025-06-22 21:37:06
 **來源**: https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT
 
 ---
 
-## 1. Despite Trump’s backing, crypto is choosing MiCA over America: Paybis
+## 1. Bears Will Be Washed Out Of Bitcoin If This Happens
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
+
+**內容**:
+Bitcoin’s narrow price movement over the past week contradicts a much different development in the futures market. According to Axel Adler Jr., an analyst at on-chain analytics platform CryptoQuant, a sharp rise in the long liquidation dominance metric could set the stage for a significant shift in sentiment that may completely wash out bears from the market. Adler shared the data in a recent post on X, accompanied by a chart showing previous points that resemble the current setup.
+Long Liquidation Spike Without Price Crash
+The dominance of long liquidations has jumped from 0% to +10% over the past seven days, a move that typically shows distress among bullish traders. However, what makes the current development especially noteworthy is the absence of a steep crash in Bitcoin’s price. Instead, in the just concluded week, Bitcoin held mostly within the $103,000 to $106,000 range until a recent drop, despite facing increasing pressure from long-side liquidations.
+Axel Adler Jr. explained that this sustained liquidation of long positions without a full-blown price collapse indicates sustained buyer support. According to data from CryptoQuant, BTC’s long liquidations hit 2,200 BTC, the highest in the past week. Usually, a surge in long liquidations suggests that traders who were anticipating a price rally are being pushed out of their positions under pressure. 
+The CryptoQuant chart below shows how spikes in long liquidation dominance, especially in the 15% to 20% range, have always preceded bullish reversals. According to the analyst, if this metric rises by another 5–7%, it could cause a high-probability scenario where bearish positions are washed out and flip Bitcoin’s price movements in favor of the bulls.
+ Image From X: @AxelAdlerJr
+Large Wallets Accumulate As Retail Exits
+Data from Santiment, another on-chain analytics platform, shows an interesting dynamic playing out among Bitcoin holders. Over the past ten days, wallets holding over 10 BTC have increased by 231 addresses, which is a 0.15% rise. Meanwhile, smaller retail wallets containing between 0.001 and 10 BTC have dropped by 37,465 in the same timeframe. This trend highlights a divergence in sentiment between large and retail holders.
+According to Santiment, the shift where whales and sharks accumulate while retail exits is a bullish combination for Bitcoin. Bitcoin’s market value is hovering just below $104,000 during this accumulation phase, and there could be an eventual upward breakout once retail holders begin to reenter.
+Image From X: Santiment
+Despite the underlying on-chain strength, Bitcoin’s spot price has taken a short-term hit in the past 48 hours. During this timeframe, Bitcoin’s price has slipped below support levels between $106,000 and $103,000. At the time of writing, Bitcoin is trading at $102,670, down by 2.6% in the past 24 hours.
+The decline can be largely attributed to recent U.S. strikes on Iran. The U.S. military strikes on Iranian nuclear facilities (June 21-22) caused immediate risk aversion across markets. Bitcoin fell 3.2% after announcements of the strikes, much like its 6% drop during similar 2020 Iran tensions.
+
+**相關符號**: `BTCUSD
+−1.38%
+BTCUSDT
+−1.42%`
+
+**來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
+
+---
+
+## 2. Here’s what happened in crypto today
+
+**Provider**: NewsBTC
+
+**內容**:
+Today in crypto, Texas Governor Greg Abbott has officially authorized the creation of the Texas Strategic Bitcoin Reserve, Jan3 founder Samson Mow eyes expanding Bitcoin nation-state adoption in Europe. Meanwhile, Bitcoin holding company Nakamoto Holdings has secured $51.5 million in fresh capital to purchase more BTC.
+Texas governor signs bill adding Bitcoin to official reserves
+Texas Governor Greg Abbott has signed Senate Bill 21 (SB21), officially authorizing the creation of the Texas Strategic Bitcoin Reserve, a state-managed fund that will hold Bitcoin as part of the state’s long-term financial assets.
+The newly established reserve operates independently of Texas’ general treasury system and aims to strengthen the state’s financial resilience while serving as a potential hedge against inflation, according to the bill text.
+Furthermore, only assets with a market capitalization exceeding $500 billion are eligible for inclusion, a threshold currently met only by Bitcoin (BTC).
+The fund will be administered by the Texas Comptroller of Public Accounts and guided by an advisory committee of three crypto investment professionals.
+Samson Mow wants Bitcoin in ‘all of Europe,’ receives invite to France
+Jan3 founder Samson Mow is setting his sights on ramping up Bitcoin nation-state adoption in Europe following a positive meeting with pro-Bitcoin French lawmaker Sarah Knafo.
+“Looking forward to starting a nation-state Bitcoin adoption wave in France and perhaps all of Europe,” Mow said in an X post on Saturday, following his meeting with Sarah Knafo, a French member of the European Parliament, at BTC Prague this week. They discussed plans to develop a Strategic Bitcoin Reserve for France and promote “friendly regulations” for the asset.
+Mow said Knafo has invited his team to France. On the same day, Knafo addressed the meeting with Mow on her X account, stating, “France must take hold of these issues.”
+Nakamoto Holdings secures $51.5M to expand Bitcoin treasury strategy
+Bitcoin holding company Nakamoto Holdings, founded by US President Donald Trump’s crypto adviser, David Bailey, has secured $51.5 million in fresh capital through a private placement in public equity (PIPE) deal, according to a statement from merger partner KindlyMD.
+Bailey said that the new funds were raised in less than 72 hours, reflecting growing investor appetite for Nakamoto’s Bitcoin (BTC) accumulation strategy.
+“Investor demand for Nakamoto is incredibly strong,” Bailey said. “We continue to execute our strategy to raise as much capital as possible to acquire as much Bitcoin as possible.”
+The financing, priced at $5.00 per share, brings KindlyMD’s total funding to approximately $563 million, and $763 million including convertible notes.
+
+**圖片** (2 張):
+
+1. ![Twitter, Bitcoin Regulation, US Government, United States, Wyoming, Trumpcoin, Social Media, Aptos, Policy, Bitcoin Reserve](images_20250622_213705/image_20250622_213713_541.jpeg)
+   - 描述: Twitter, Bitcoin Regulation, US Government, United States, Wyoming, Trumpcoin, Social Media, Aptos, Policy, Bitcoin Reserve
+   - 文件: `image_20250622_213713_541.jpeg`
+2. ![Twitter, US Government, United States, Wyoming, Donald Trump, Trumpcoin, Social Media, Aptos, Memecoin, Policy](images_20250622_213705/image_20250622_213713_597.jpeg)
+   - 描述: Twitter, US Government, United States, Wyoming, Donald Trump, Trumpcoin, Social Media, Aptos, Memecoin, Policy
+   - 文件: `image_20250622_213713_597.jpeg`
+**相關符號**: `BTCUSDT
+−1.39%`
+
+**來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
+
+---
+
+## 3. Despite Trump’s backing, crypto is choosing MiCA over America: Paybis
+
+**Provider**: NewsBTC
 
 **內容**:
 Europe is pulling ahead in the global crypto race under its Markets in Crypto-Assets (MiCA) framework, outpacing even President Donald Trump’s crypto-friendly America.
@@ -28,16 +91,20 @@ Germany leads in institutional infrastructure, with Deutsche Boerse’s Clearstr
 According to Vasilenko, the idea of a single “hub” may become outdated. “Liquidity pools in Frankfurt or Paris, customer support in Dublin, and compliance ops in Vilnius — all under the single MiCA umbrella,” he said.
 The US could still see a comeback. The GENIUS Act, currently making its way through Congress, could introduce a unified licensing regime and clear definitions for dollar-backed stablecoins. If passed by year-end, Vasilenko believes it “would do for US retail what MiCA just did for Europeans.”
 
+**圖片** (1 張):
+
+1. ![image](images_20250622_213705/image_20250622_213716_860.jpeg)
+   - 文件: `image_20250622_213716_860.jpeg`
 **相關符號**: `BTCUSDT
-+0.63%`
+−1.41%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 2. Bitcoin Dominance Skyrockets as ETH and Other Altcoins Plummet
+## 4. Bitcoin Dominance Skyrockets as ETH and Other Altcoins Plummet
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 Bitcoin’s price took another turn for the worse in the past 24 hours after the US attacked multiple Iranian nuclear sites, and the asset plunged to a multi-week low.
@@ -52,19 +119,19 @@ Solana, Dogecoin, Cardano, SUI, LINK, HBAR, and LINK are also deep in the red fr
 These developments are only supporting a recent report, which claimed that those hoping for an altseason are relying mostly on “wishful thinking” rather than any hard data.
 
 **相關符號**: `BTCUSD
-+0.64%
+−1.35%
 BTCEUR
-+0.55%
+−1.47%
 BTCGBP
-+0.62%`
+−1.37%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 3. Bitcoin price risks sub-$100K dive after Trump confirms Iran strikes
+## 5. Bitcoin price risks sub-$100K dive after Trump confirms Iran strikes
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 Key points:
@@ -95,18 +162,36 @@ Previously, Cointelegraph reported on exchange order book liquidity, potentially
 Data from monitoring resource CoinGlass showed that the area remained significant at the time of writing.
 This article does not contain investment advice or recommendations. Every investment and trading move involves risk, and readers should conduct their own research when making a decision.
 
+**圖片** (8 張):
+
+1. ![image](images_20250622_213705/image_20250622_213723_289.svg)
+   - 文件: `image_20250622_213723_289.svg`
+2. ![image](images_20250622_213705/image_20250622_213723_338.jpeg)
+   - 文件: `image_20250622_213723_338.jpeg`
+3. ![image](images_20250622_213705/image_20250622_213723_365.svg)
+   - 文件: `image_20250622_213723_365.svg`
+4. ![image](images_20250622_213705/image_20250622_213723_388.jpeg)
+   - 文件: `image_20250622_213723_388.jpeg`
+5. ![image](images_20250622_213705/image_20250622_213723_416.svg)
+   - 文件: `image_20250622_213723_416.svg`
+6. ![image](images_20250622_213705/image_20250622_213723_482.jpeg)
+   - 文件: `image_20250622_213723_482.jpeg`
+7. ![image](images_20250622_213705/image_20250622_213723_510.svg)
+   - 文件: `image_20250622_213723_510.svg`
+8. ![image](images_20250622_213705/image_20250622_213723_534.jpeg)
+   - 文件: `image_20250622_213723_534.jpeg`
 **相關符號**: `BTCUSD
-+0.55%
+−1.47%
 BTCUSDT
-+0.61%`
+−1.41%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 4. Texas governor signs bill adding Bitcoin to official reserves
+## 6. Texas governor signs bill adding Bitcoin to official reserves
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 Texas Governor Greg Abbott has signed Senate Bill 21 (SB21), officially authorizing the creation of the Texas Strategic Bitcoin Reserve, a state-managed fund that will hold Bitcoin as part of the state’s long-term financial assets.
@@ -114,16 +199,20 @@ The newly established reserve operates independently of Texas’ general treasur
 Furthermore, only assets with a market capitalization exceeding $500 billion are eligible for inclusion, a threshold currently met only by Bitcoin (BTC).
 The fund will be administered by the Texas Comptroller of Public Accounts and guided by an advisory committee of three crypto investment professionals.
 
+**圖片** (1 張):
+
+1. ![image](images_20250622_213705/image_20250622_213726_763.jpeg)
+   - 文件: `image_20250622_213726_763.jpeg`
 **相關符號**: `BTCUSDT
-+0.61%`
+−1.37%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 5. Signal trading ‘school’ and fake exchange rob investor of $860K: Lawsuit
+## 7. Signal trading ‘school’ and fake exchange rob investor of $860K: Lawsuit
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 A Florida investor says he was scammed out of $860,000 by a Denver-based trading “school” and a fake crypto exchange that promised him life-changing profits.
@@ -142,16 +231,51 @@ $2.1B crypto stolen in 2025
 So far in 2025, over $2.1 billion has been stolen in crypto-related incidents, with most losses tied to wallet compromises and key mismanagement, CertiK co-founder Ronghui Gu said. The trend points to a growing shift from code-based hacks to targeting user behavior.
 In 2024 alone, phishing attacks accounted for over $1 billion in losses across nearly 300 incidents, making it the most damaging method of attack in the crypto space.
 
+**圖片** (1 張):
+
+1. ![image](images_20250622_213705/image_20250622_213730_020.jpeg)
+   - 文件: `image_20250622_213730_020.jpeg`
 **相關符號**: `BTCUSDT
-+0.59%`
+−1.39%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 6. Michael Saylor’s Strategy premium is not ‘unreasonable’: Adam Back
+## 8. Bitcoin Price Slips Below $102,000 — Here’s The Next Support In Sight
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
+
+**內容**:
+The Bitcoin price had a tough start to the weekend, plummeting from its $106,000 high to just above $103,000 on Friday, June 20. The flagship cryptocurrency became somewhat stable above this price zone, hovering around the $104,000 mark for most of the past day.
+However, the Bitcoin price faced another wave of bearish pressure in the late hours of Saturday, June 21, falling to around $101,500 as a result. Below is an analysis of the BTC price and what lies ahead for the world’s largest cryptocurrency by market capitalization.
+Next BTC Support Level Lies At $100,000: Analyst
+Popular crypto analyst with the pseudonym Titan of Crypto put forward an interesting analysis for the Bitcoin price as the market leader struggles to build any momentum. According to the online pundit, the price of BTC could be on its way to retest a crucial support area if it continues to lose its bullish impetus.
+Using the Bitcoin price chart on the weekly timeframe, the next significant support level lies around the $99,000 – $100,000 range. The confluence of the Fair Value Gap (FVG) and the rising Tenkan-sen (red line) around this price region makes the zone a significant area to watch if selling pressure persists.
+The Tenkan-sen, a key component of the Ichimoku Cloud indicator, is often considered a significant line in analyzing short-term trends. The Tenkan-sen line is often seen as a key support and resistance level, as well as a signal line for potential trend reversals.
+The Fair Value Gap is a liquidity void often created by a sharp movement in price, indicating a lack of trading activity within a particular price range. FVGs are usually considered as potential regions of interest for future price corrections, as investors often look to fill the liquidity void.
+With the FVG and the Tenkan-sen set within this same region, Titan of Crypto noted that the Bitcoin price may find a support cushion around the $100,000. This level appears to be extremely crucial for the flagship cryptocurrency in the short term, especially as its bullish momentum wanes.
+Meanwhile, holding above this $100,000 support could be critical to Bitcoin’s long-term trajectory. It is worth noting that the price of BTC has not traded beneath $100,000 since May 8, reaching the $110,000 mark twice within that span.
+Bitcoin Price At A Glance
+After falling to around $101,400 in the late hours of Saturday, the price of Bitcoin has now returned around $103,000. As of this writing, the price of BTC stands at around $102,845, reflecting a 0.4% decline in the past 24 hours.
+
+**圖片** (1 張):
+
+1. ![Bitcoin price](images_20250622_213705/image_20250622_213733_284.jpeg)
+   - 描述: Bitcoin price
+   - 文件: `image_20250622_213733_284.jpeg`
+**相關符號**: `BTCUSD
+−1.38%
+BTCUSDT
+−1.39%`
+
+**來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
+
+---
+
+## 9. Michael Saylor’s Strategy premium is not ‘unreasonable’: Adam Back
+
+**Provider**: NewsBTC
 
 **內容**:
 Blockstream CEO Adam Back says Michael Saylor’s Strategy (MSTR) stock premium is within reason, considering how quickly the firm doubles its Bitcoin per share, which reduces risk for investors.
@@ -171,16 +295,21 @@ Back said that although Japanese investment firm Metaplanet has experienced more
 “But so far, it’s tended to bounce back after that,” he said.
 Meanwhile, Metaplanet’s latest 1,112 Bitcoin purchase on June 16 has tipped its total Bitcoin holdings to 10,000 BTC, surpassing Coinbase as the seventh-largest publicly traded company with a Bitcoin treasury.
 
+**圖片** (1 張):
+
+1. ![Cryptocurrencies, Bitcoin Price, Adam Back, MicroStrategy, Michael Saylor](images_20250622_213705/image_20250622_213736_505.jpeg)
+   - 描述: Cryptocurrencies, Bitcoin Price, Adam Back, MicroStrategy, Michael Saylor
+   - 文件: `image_20250622_213736_505.jpeg`
 **相關符號**: `BTCUSDT
-+0.59%`
+−1.41%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 7. Bitcoin Price Drops to $101K, Where’s the Bottom?
+## 10. Bitcoin Price Drops to $101K, Where’s the Bottom?
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 The cryptocurrency markets continue bleeding out, with Bitcoin dropping to as low as $101,000 earlier today.
@@ -190,19 +319,19 @@ Data from Coinglass also reveals elevated levels of liquidated positions across 
 The heatmap below also paints a depressing picture. As you can see, with the exception of LEO, every single altcoin from the top 50 (by market capitalization) is charting significant losses over the past 24 hours.
 
 **相關符號**: `BTCGBP
-+0.61%
+−1.36%
 BTCUSD
-+0.61%
+−1.27%
 BTCEUR
-+0.51%`
+−1.35%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 8. Altcoins Turn Red as US Strikes Iran in Major Escalation
+## 11. Altcoins Turn Red as US Strikes Iran in Major Escalation
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 The crypto market reflected significant losses as the US officially entered the Iran-Israel war late Saturday night. According to President Trump, the US has bombed notable nuclear sites in Iran, signaling its first active strike in this geopolitical conflict.The crypto market reacted with notable liquidations across the altcoin sector. Ethereum dropped over 5% following the news, trading below $2,300 for the first time in a month. 
@@ -213,15 +342,15 @@ As of now, the market will be cautiously looking at Iran’s response. President
 Overall, crypto liquidations exceeded $670 million today, and further escalation could very well signal a short-term bearish cycle.
 
 **相關符號**: `BTCUSD
-+0.61%`
+−1.27%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 9. Samson Mow wants Bitcoin in ‘all of Europe,’ receives invite to France
+## 12. Samson Mow wants Bitcoin in ‘all of Europe,’ receives invite to France
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 Jan3 founder Samson Mow is setting his sights on ramping up Bitcoin nation-state adoption in Europe following a positive meeting with pro-Bitcoin French lawmaker Sarah Knafo.
@@ -244,16 +373,20 @@ On March 29, Elisenda Fabrega, general counsel at Brickken, a European real-worl
 MiCA, the European Union’s regulatory framework for crypto-assets, was proposed in September 2020, adopted in May 2023, and was fully enforced in December 2024.
 Magazine: New York’s PubKey Bitcoin bar will orange-pill Washington DC next
 
+**圖片** (1 張):
+
+1. ![image](images_20250622_213705/image_20250622_213744_386.jpeg)
+   - 文件: `image_20250622_213744_386.jpeg`
 **相關符號**: `BTCUSDT
-+0.57%`
+−1.29%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 10. Pump.fun’s Big Launch Put On Ice Over Legal Drama
+## 13. Pump.fun’s Big Launch Put On Ice Over Legal Drama
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 Pump.fun’s latest delay has rattled its backers. The Solana‐based memecoin launchpad was set to raise $1 billion at a $4 billion valuation on June 25. Now, the team says the sale will slip into mid‑July.
@@ -272,17 +405,17 @@ Some users suspect a regulator asked for the takedown. Others think it was trade
 Featured image from Pexels, chart from TradingView
 
 **相關符號**: `SOLUSD
-−1.55%
+−4.88%
 BTCUSD
-+0.54%`
+−1.24%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 11. Bitcoin CBD Heatmap Marks $95,500–$97,000 As Make-Or-Break Zone – Details
+## 14. Bitcoin CBD Heatmap Marks $95,500–$97,000 As Make-Or-Break Zone – Details
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 Since hitting a new all-time high almost a month ago, Bitcoin has done little to assure investors of intent to explore new price territories. Amid announcement of new US trade tariffs and rising geopolitical tensions between Israel and Iran, the premier cryptocurrency has come under bearish influences to trade as low as 101,000.
@@ -294,18 +427,23 @@ According to Glassnode’s report, the Bitcoin’s CBD heatmap shows the first d
 Bitcoin Market Overview
 At the time of writing, Bitcoin is trading at $103,753 with a cumulative 1.27% decline in the past week. During this period, the flagship cryptocurrency remained largely under $106,000 barring a weak price breakout between June 16 and June 17. On a monthly scale, Bitcoin has now recorded a 6.10% loss, signaling a gradual shift in momentum with bearish forces regaining control of the market. Meanwhile, with a market cap of $2.05 trillion, the “digital gold” continues to rank as the largest cryptocurrency with a reported market dominance of 64.3%.
 
+**圖片** (1 張):
+
+1. ![Bitcoin](images_20250622_213705/image_20250622_213750_946.jpeg)
+   - 描述: Bitcoin
+   - 文件: `image_20250622_213750_946.jpeg`
 **相關符號**: `BTCUSD
-+0.54%
+−1.21%
 BTCUSDT
-+0.54%`
+−1.25%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 12. Chainlink Bears Push Toward $12.50 As Weekend Volatility Looms
+## 15. Chainlink Bears Push Toward $12.50 As Weekend Volatility Looms
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 According to an analysis posted on X by CRYPTOWZRD, Chainlink has closed the session with a bearish tone and is now testing the key $12.50 support level. With reduced weekend liquidity expected, price action is likely to remain choppy, making it essential to closely monitor intraday volatility. A clearer setup could take time to develop, but this zone may offer early clues about the token’s next move.
@@ -321,19 +459,19 @@ On the bullish side, the analyst points out that a decisive breakout and sustain
 Conversely, the analyst warns that a failed attempt to hold $12.85—marked by a retest and subsequent decline- would favor the bears. Such rejection would create potential short setups, as renewed selling pressure could drag the price lower, especially if broader market conditions stay cautious.
 
 **相關符號**: `BTCUSD
-+0.54%
+−1.31%
 LINKBTC
-−1.02%
+−3.06%
 LINKUSD
-−0.81%`
+−4.48%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 13. Stablecoin Wars Ignite: Peter Schiff Champions Gold-Backed Digital Assets
+## 16. Stablecoin Wars Ignite: Peter Schiff Champions Gold-Backed Digital Assets
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 Stablecoin backing is under fresh fire after outspoken economist and gold supporter Peter Schiff took aim at tokens tied to US dollar reserves. He argues that relying on a fiat currency he views as shaky makes little sense when a more stable asset exists.
@@ -349,15 +487,15 @@ Investors also pointed out that stablecoins are widely used in lending, trading 
 Featured image Imagen, chart from TradingView
 
 **相關符號**: `BTCUSD
-+0.54%`
+−1.29%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 14. Spot Ethereum ETFs log largest outflows in one month as ETH price tumbles below $2,400
+## 17. Spot Ethereum ETFs log largest outflows in one month as ETH price tumbles below $2,400
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 U.S. spot Ethereum ETFs saw their largest outflow since mid-May on Friday, before ether's price tumbled below $2,400 on Saturday. Spot Bitcoin ETFs, on the other hand, continued to set cumulative inflow records with a 9-day streak of net positive inflows. 
@@ -373,17 +511,17 @@ Disclaimer: The Block is an independent media outlet that delivers news, researc
 © 2025 The Block. All Rights Reserved. This article is provided for informational purposes only. It is not offered or intended to be used as legal, tax, investment, financial, or other advice.
 
 **相關符號**: `BTCUSD
-+0.54%
+−1.26%
 ETHUSD
-−0.64%`
+−4.27%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 15. Strategy’s Michael Saylor raises Bitcoin forecast to $21M by 2046
+## 18. Strategy’s Michael Saylor raises Bitcoin forecast to $21M by 2046
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 Bitcoin bull and Strategy founder Michael Saylor has doubled down on the long-term value of BTC amid fast-changing geopolitical and cryptocurrency adoption trends.
@@ -408,18 +546,26 @@ In the meantime, the concept of self-custody continued to gain traction at the B
 “BTC Prague continues to attract a strongly Bitcoin-focused crowd, most attendees were deeply engaged with the future of Bitcoin,” Danny Sanders, chief commercial officer at the hardware wallet company Trezor, told Cointelegraph.
 One of the main sponsors of BTC Prague, Trezor, welcomed more than 5,000 visitors at the conference, Sanders said. Those included a “vibrant mix of developers, Bitcoiners, and newcomers — all genuinely interested in open-source tools and the principles of self-custody,” he added.
 
+**圖片** (3 張):
+
+1. ![image](images_20250622_213705/image_20250622_213803_838.svg)
+   - 文件: `image_20250622_213803_838.svg`
+2. ![image](images_20250622_213705/image_20250622_213803_867.jpeg)
+   - 文件: `image_20250622_213803_867.jpeg`
+3. ![image](images_20250622_213705/image_20250622_213803_893.jpeg)
+   - 文件: `image_20250622_213803_893.jpeg`
 **相關符號**: `BTCUSD
-+0.46%
+−1.40%
 BTCUSDT
-+0.53%`
+−1.39%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 16. Bitcoin Active Addresses At 2020 Level — What’s Happening?
+## 19. Bitcoin Active Addresses At 2020 Level — What’s Happening?
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 The Bitcoin price action in June has displayed healthy swings from a low of about $100,500 to as high as $111,000. While it has lacked the impulsive momentum seen in past cycles for more bullish swings, the premier cryptocurrency has managed to maintain its valuation above $100,000.
@@ -434,18 +580,23 @@ As Bitcoin still prevails above $100,000, this could be a strong indication, Alp
 Bitcoin Price At A Glance 
 As of this writing, Bitcoin is valued at about $103,290, reflecting an over 1% price decline in the past 24 hours. According to data from CoinGecko, the price of BTC has fallen by about 2.4% in value over the past seven days.
 
+**圖片** (1 張):
+
+1. ![Bitcoin](images_20250622_213705/image_20250622_213807_161.jpeg)
+   - 描述: Bitcoin
+   - 文件: `image_20250622_213807_161.jpeg`
 **相關符號**: `BTCUSD
-+0.54%
+−1.33%
 BTCUSDT
-+0.53%`
+−1.37%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 17. Historical Bitcoin trend calls for $330K BTC price before bull market ends
+## 20. Historical Bitcoin trend calls for $330K BTC price before bull market ends
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 Key takeaways:
@@ -465,16 +616,27 @@ Likewise, Cointelegraph reported that a list of 30 bull market peak indicators f
 Related: Bitcoin below $100K now ‘less likely’ as BTC price eyes liquidity at $106K
 This article does not contain investment advice or recommendations. Every investment and trading move involves risk, and readers should conduct their own research when making a decision.
 
+**圖片** (3 張):
+
+1. ![Cryptocurrencies, Bitcoin Price, Markets, Price Analysis, Market Analysis](images_20250622_213705/image_20250622_213808_696.jpeg)
+   - 描述: Cryptocurrencies, Bitcoin Price, Markets, Price Analysis, Market Analysis
+   - 文件: `image_20250622_213808_696.jpeg`
+2. ![Cryptocurrencies, Bitcoin Price, Markets, Price Analysis, Market Analysis](images_20250622_213705/image_20250622_213808_729.jpeg)
+   - 描述: Cryptocurrencies, Bitcoin Price, Markets, Price Analysis, Market Analysis
+   - 文件: `image_20250622_213808_729.jpeg`
+3. ![Cryptocurrencies, Bitcoin Price, Markets, Price Analysis, Market Analysis](images_20250622_213705/image_20250622_213808_758.jpeg)
+   - 描述: Cryptocurrencies, Bitcoin Price, Markets, Price Analysis, Market Analysis
+   - 文件: `image_20250622_213808_758.jpeg`
 **相關符號**: `BTCUSDT
-+0.52%`
+−1.36%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 18. All Signs Point To A Bitcoin Liftoff—Here’s What The Experts See
+## 21. All Signs Point To A Bitcoin Liftoff—Here’s What The Experts See
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 Based on reports from analyst Moustache, Bitcoin may be gearing up for its next big move. The world’s largest cryptocurrency climbed above $105,000 for the second time this week. At press time, it was trading at nearly $104,000, up 0.50% over the past 24 hours.
@@ -491,16 +653,22 @@ Investors will be looking beyond technical cues. Macro events, ETF moves and reg
 But a surprise headline or policy change might go the other direction. For now, the intersection of high RSI and increasing whale demand suggests a setup that has fueled previous bull frenzies.
 Featured image from Unsplash, chart from TradingView
 
+**圖片** (2 張):
+
+1. ![image](images_20250622_213705/image_20250622_213811_988.jpeg)
+   - 文件: `image_20250622_213811_988.jpeg`
+2. ![image](images_20250622_213705/image_20250622_213812_014.jpeg)
+   - 文件: `image_20250622_213812_014.jpeg`
 **相關符號**: `BTCUSD
-+0.54%`
+−1.32%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 19. Bitcoin Price Breakdown Spurs Sell-Offs, Analyst Reveals What Will Happen If BTC Hits 92,800
+## 22. Bitcoin Price Breakdown Spurs Sell-Offs, Analyst Reveals What Will Happen If BTC Hits 92,800
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 The Bitcoin price crashed from as high as $106,000 to $102,000 on June 20, sparking sell-offs among investors. Now, crypto analyst Colin has indicated that the flagship crypto could still drop to as low as $92,800 and revealed what will happen if BTC gets there. 
@@ -515,17 +683,17 @@ Titan of Crypto stated that if this lower boundary at around $104,000 fails, the
 At the time of writing, the Bitcoin price is trading at around $103,500, down in the last 24 hours, according to data from CoinMarketCap.
 
 **相關符號**: `BTCUSD
-+0.54%
+−1.30%
 BTCUSDT
-+0.53%`
+−1.34%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 20. Bitcoin Knots gain ground: Will a chain split kill BTC price?
+## 23. Bitcoin Knots gain ground: Will a chain split kill BTC price?
 
-**列表標題**: Cointelegraph
+**Provider**: NewsBTC
 
 **內容**:
 Bitcoin Knots, first released by developer Luke Dashjr in the early 2010s, has long offered a more configurable and policy-agnostic alternative to Core.
@@ -555,46 +723,24 @@ The stakes, this time, are higher. With Bitcoin ETFs, corporations’ stacking B
 If Bitcoin Knots keeps its average growth run rate from May through October 2025, there will be over 5,000 nodes running the Knots client. That will equate to around 23% of the entire Bitcoin network.
 That level of adoption would mark the largest divergence from Bitcoin Core since the 2017 hard fork, and this time, the rebellion is already inside the house.
 
+**圖片** (2 張):
+
+1. ![image](images_20250622_213705/image_20250622_213818_439.jpeg)
+   - 文件: `image_20250622_213818_439.jpeg`
+2. ![image](images_20250622_213705/image_20250622_213818_464.jpeg)
+   - 文件: `image_20250622_213818_464.jpeg`
 **相關符號**: `BTCUSDT
-+0.53%
+−1.34%
 BCHUSDT
-−0.71%`
+−2.55%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
 ---
 
-## 21. Here’s what happened in crypto today
+## 24. Bitcoin (BTC) Price Prediction for June 21
 
-**列表標題**: Cointelegraph
-
-**內容**:
-Today in crypto, Jan3 founder Samson Mow eyes expanding Bitcoin nation-state adoption in Europe, Bitcoin holding company Nakamoto Holdings has secured $51.5 million in fresh capital to purchase more BTC. Meanwhile, CoinMarketCap continues to investigate after its website was hit with a phishing scam.
-Samson Mow wants Bitcoin in ‘all of Europe,’ receives invite to France
-Jan3 founder Samson Mow is setting his sights on ramping up Bitcoin nation-state adoption in Europe following a positive meeting with pro-Bitcoin French lawmaker Sarah Knafo.
-“Looking forward to starting a nation-state Bitcoin adoption wave in France and perhaps all of Europe,” Mow said in an X post on Saturday, following his meeting with Sarah Knafo, a French member of the European Parliament, at BTC Prague this week. They discussed plans to develop a Strategic Bitcoin Reserve for France and promote “friendly regulations” for the asset.
-Mow said Knafo has invited his team to France. On the same day, Knafo addressed the meeting with Mow on her X account, stating, “France must take hold of these issues.”
-Nakamoto Holdings secures $51.5M to expand Bitcoin treasury strategy
-Bitcoin holding company Nakamoto Holdings, founded by US President Donald Trump’s crypto adviser, David Bailey, has secured $51.5 million in fresh capital through a private placement in public equity (PIPE) deal, according to a statement from merger partner KindlyMD.
-Bailey said that the new funds were raised in less than 72 hours, reflecting growing investor appetite for Nakamoto’s Bitcoin (BTC) accumulation strategy.
-“Investor demand for Nakamoto is incredibly strong,” Bailey said. “We continue to execute our strategy to raise as much capital as possible to acquire as much Bitcoin as possible.”
-The financing, priced at $5.00 per share, brings KindlyMD’s total funding to approximately $563 million, and $763 million including convertible notes.
-CoinMarketCap has 'identified and removed' malicious wallet scam
-CoinMarketCap, a price-tracking website for cryptocurrencies, has reportedly removed a malicious popup notification on its website prompting users to verify their cryptocurrency wallets, according to a post on its official X account.
-“We’ve identified and removed the malicious code from our site,” CoinMarketCap said in a post on Friday.
-“Our team is continuing to investigate and taking steps to strengthen our security,” it added.
-The update came less than three hours after CoinMarketCap publicly addressed the malicious notification amid multiple reports spreading on social media.
-
-**相關符號**: `BTCUSDT
-+0.53%`
-
-**來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
-
----
-
-## 22. Bitcoin (BTC) Price Prediction for June 21
-
-**列表標題**: Cointelegraph
+**Provider**: Cointelegraph
 
 **內容**:
 Bulls have failed to keep the market green at the beginning of the weekend, according to CoinStats.CoinStats">
@@ -608,68 +754,18 @@ The volume remains low, which means traders are unlikely to witness sharp moves 
 From the midterm point of view, the price is on the way to the support of $100,764. If bulls lose that mark, the accumulated energy might be enough for a test of the $98,000-$100,000 range soon.
 Bitcoin is trading at $103,940 at press time.
 
+**圖片** (2 張):
+
+1. ![image](images_20250622_213705/image_20250622_213821_672.svg)
+   - 文件: `image_20250622_213821_672.svg`
+2. ![image](images_20250622_213705/image_20250622_213821_699.svg)
+   - 文件: `image_20250622_213821_699.svg`
 **相關符號**: `BTCUSD
-+0.45%
+−1.41%
 BTCUSD
-+0.54%
+−1.29%
 BTCUSDC
-+0.51%`
-
-**來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
-
----
-
-## 23. Bitcoin Net Taker Volume Enters Deep Red On Binance — What’s Next For BTC Price?
-
-**列表標題**: Cointelegraph
-
-**內容**:
-After another strong play for its all-time high in the past week, the price of Bitcoin has struggled to build on its recent bullish momentum. Over the last few days, the premier cryptocurrency has been specifically slow and lethargic.
-On Friday, June 20, the Bitcoin price took a severe hit — together with the rest of the crypto market — and fell briefly beneath the $103,000 mark. However, the latest market data suggests that the price of BTC might enjoy some stability after the recent round of long liquidations.
-BTC Gearing For A Run Of ‘Healthier Price Action’: Analyst
-In a Quicktake post on the CryptoQuant platform, on-chain analyst Amr Taha explained the dynamics between the Bitcoin price and its recent long liquidation event. According to the online pundit, the market leader could be preparing for more stable price action over the next few weeks.
-Taha revealed that the critical $103,000 liquidation cluster, which held a large volume of overleveraged long positions on Binance, has been cleared off. This cascade of long liquidations came after the price of Bitcoin plunged toward the $102,500 level on Friday evening.
-According to data from CryptoQuant, the price decline caused the long liquidations on Binance, the world’s largest exchange by trading volume, to exceed $160 million. The on-chain analyst noted that this long liquidation event also coincided with a major change in the Bitcoin Net Taker Volume on the cryptocurrency exchange.
-Taha highlighted that the Net Taker Volume has moved deep into the negative territory, falling to nearly -$100 million in the past day. As observed in the chart below, this latest plunge marks the third time the Net taker Volume has fallen to this level in the month of June.
-According to Taha, the change in this metric suggests that aggressive selling outweighed buying activity during the liquidation event. The on-chain analyst outlines two possible reasons for this trend, including that long positions were forced to close, pushing sell orders into the market as the Bitcoin price fell below $103,000. 
-Taha added that some sections of Bitcoin retail traders might have pushed the panic button and filled new sell orders in fear of further losses. In the end, the crypto analyst concluded that the combination of long liquidations and extremely negative Net Taker Volume might not be completely bad for the flagship cryptocurrency.
-Taha said:
-While such events often feel devastating in the moment, they lay the groundwork for healthier price action. Given these dynamics, the path of least resistance may now shift upward as Bitcoin stabilizes above key support levels with reduced leverage overhead.
-Bitcoin Price At A Glance
-As of this writing, the price of BTC stands at around $103,450, reflecting an over 1% decline in the past 24 hours.
-
-**相關符號**: `BTCUSD
-+0.54%
-BTCUSDT
-+0.53%`
-
-**來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
-
----
-
-## 24. Texas Bitcoin Reserve Might Pass Without the Governor’s Signature
-
-**列表標題**: Cointelegraph
-
-**內容**:
-Texas Governor Greg Abbott has yet to sign Senate Bill (SB) 21, which would establish a Strategic Bitcoin Reserve (SBR) for the state.
-On June 20, Abbott signed 306 bills from the 89th Regular Legislative Session, including 15 considered high-priority. One of those measures mandates efficiency audits across state agencies to tighten government accountability.
-Legal Groundwork for a Permanent Texas Bitcoin Reserve
-However, SB 21 was notably absent from the list, despite its potential to make Texas one of the first US states to hold Bitcoin as a reserve asset.
-SB 21 would allow the state comptroller to allocate surplus General Revenue toward purchasing Bitcoin, using transparency and oversight guidelines similar to those already in place for gold holdings in the Texas Bullion Depository.
-To maintain asset stability, the bill only permits assets with a market capitalization above $600 billion for two consecutive years. Currently, only Bitcoin meets that standard.
-Governor Abbott’s office stated that he is still reviewing over 1,200 bills sent to his desk this session. That includes SB 21, which remains under consideration just days before the automatic enactment deadline.
-Still, Julian Fahrer, founder of Bitcoin Laws, noted the missed opportunity for a symbolic signing event, citing similar ceremonies held for other high-profile bills.
-“It’s a bit odd he missed the last weekday opportunity to hold a press conference and make a show of it – as he’s done for other high priority bills,” Fahrer said.
-However, Fahrer explained that the Bitcoin bill could become law even without his signature on June 22. Under Texas law, any bill not vetoed or signed within 20 days of the legislative session’s adjournment automatically goes into effect.
-“It’s in the Texas constitution. 20 days after adjournment, unsigned bills become law,” he stated.
-Moreover, the Bitcoin advocate pointed out that Abbott did sign House Bill 4488, which may relate indirectly to SB 21.
-That legislation secures certain state-managed funds—possibly including the proposed Bitcoin reserve—by designating them as permanent. These funds could be stored inside or outside the state treasury, based on future legislative direction.
-Meanwhile, the Governor’s lack of action on SB 21 has stirred curiosity, particularly given his past support for crypto.
-Just weeks ago, Abbott shared news of the bill on his official X account, signaling enthusiasm for blockchain innovation in Texas. He has also backed legislation promoting crypto mining as a tool for economic growth and grid resilience.
-
-**相關符號**: `BTCUSD
-+0.54%`
+−1.32%`
 
 **來源**: [TradingView](https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT)
 
@@ -677,5 +773,7 @@ Just weeks ago, Abbott shared news of the bill on his official X account, signal
 
 
 ---
-**報告生成時間**: 2025-06-22 21:04:50
+**報告生成時間**: 2025-06-22 21:38:22
 **總共爬取**: 24 條新聞
+**總共下載**: 30 張圖片
+**圖片保存目錄**: `images_20250622_213705/`

@@ -15,6 +15,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 import json
 import os
+import requests
+from urllib.parse import urljoin, urlparse
 from datetime import datetime
 
 class TradingViewNewsSpider(scrapy.Spider):
@@ -50,6 +52,16 @@ class TradingViewNewsSpider(scrapy.Spider):
         # 初始化Markdown輸出
         self.markdown_content = []
         self.output_filename = f'tradingview_news_{datetime.now().strftime("%Y%m%d_%H%M%S")}.md'
+        
+        # 創建圖片保存目錄
+        self.images_dir = f'images_{datetime.now().strftime("%Y%m%d_%H%M%S")}'
+        os.makedirs(self.images_dir, exist_ok=True)
+        
+        # 圖片下載設置
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        })
         
     def parse(self, response):
         """主要解析函數"""
@@ -116,10 +128,8 @@ class TradingViewNewsSpider(scrapy.Spider):
     def scroll_and_load_news(self):
         """滾動頁面加載更多新聞"""
         last_height = self.driver.execute_script("return document.body.scrollHeight")
-        scroll_attempts = 0
-        max_scrolls = 5  # 限制滾動次數
         
-        while scroll_attempts < max_scrolls:
+        while True:
             # 滾動到頁面底部
             self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             time.sleep(3)  # 等待加載
@@ -131,9 +141,8 @@ class TradingViewNewsSpider(scrapy.Spider):
                 break
                 
             last_height = new_height
-            scroll_attempts += 1
-            
-        self.logger.info(f"完成 {scroll_attempts} 次滾動加載")
+        
+        self.logger.info("完成滾動加載")
     
     def get_news_title(self, news_item):
         """獲取新聞標題"""
@@ -167,8 +176,8 @@ class TradingViewNewsSpider(scrapy.Spider):
             # 提取標題（從右側面板）
             panel_title = self.extract_panel_title()
             
-            # 提取內容
-            content = self.extract_content()
+            # 提取內容和圖片
+            content_data = self.extract_content()
             
             # 提取相關符號
             symbols = self.extract_symbols()
@@ -177,12 +186,13 @@ class TradingViewNewsSpider(scrapy.Spider):
                 'index': index + 1,
                 'list_title': title,  # 列表中的標題
                 'panel_title': panel_title,  # 右側面板中的標題
-                'content': content,
+                'content': content_data['text'],  # 文本內容
+                'images': content_data['images'],  # 圖片信息
                 'symbols': symbols,
                 'url': self.driver.current_url
             }
             
-            self.logger.info(f"成功提取第 {index+1} 條新聞: {panel_title[:50]}...")
+            self.logger.info(f"成功提取第 {index+1} 條新聞: {panel_title[:50]}... (包含 {len(content_data['images'])} 張圖片)")
             return news_data
             
         except TimeoutException:
@@ -209,28 +219,50 @@ class TradingViewNewsSpider(scrapy.Spider):
             return "無標題"
     
     def extract_content(self):
-        """提取新聞內容"""
+        """提取新聞內容並下載圖片"""
         try:
             if self.xpaths['panel_content']:
                 # 支持單個或多個內容元素
                 content_elements = self.driver.find_elements(By.XPATH, self.xpaths['panel_content'])
                 
                 contents = []
+                images = []
+                
                 for element in content_elements:
+                    # 提取文本內容
                     text = element.text.strip()
                     if text and len(text) > 10:  # 過濾掉太短的文本
                         contents.append(text)
+                    
+                    # 查找並下載圖片
+                    img_elements = element.find_elements(By.TAG_NAME, 'img')
+                    for img in img_elements:
+                        image_info = self.download_image(img)
+                        if image_info:
+                            images.append(image_info)
                 
                 # 去重並合併內容
                 unique_contents = list(dict.fromkeys(contents))  # 保持順序的去重
-                return ' '.join(unique_contents) if unique_contents else "無內容"
+                text_content = ' '.join(unique_contents) if unique_contents else "無內容"
+                
+                # 返回文本內容和圖片信息
+                return {
+                    'text': text_content,
+                    'images': images
+                }
             else:
                 self.logger.warning("未設置 panel_content 的XPATH路徑")
-                return "無內容"
+                return {
+                    'text': "無內容",
+                    'images': []
+                }
                 
         except Exception as e:
             self.logger.error(f"提取內容時出錯: {str(e)}")
-            return "無內容"
+            return {
+                'text': "無內容",
+                'images': []
+            }
     
     def extract_symbols(self):
         """提取相關符號"""
@@ -274,6 +306,52 @@ class TradingViewNewsSpider(scrapy.Spider):
         except Exception as e:
             self.logger.error(f"關閉右側面板時出錯: {str(e)}")
     
+    def download_image(self, img_element):
+        """下載圖片並返回圖片信息"""
+        try:
+            # 獲取圖片URL
+            img_src = img_element.get_attribute('src')
+            if not img_src:
+                return None
+            
+            # 處理相對URL
+            if img_src.startswith('//'):
+                img_src = 'https:' + img_src
+            elif img_src.startswith('/'):
+                img_src = urljoin('https://www.tradingview.com', img_src)
+            
+            # 獲取圖片alt文本作為描述
+            img_alt = img_element.get_attribute('alt') or 'image'
+            
+            # 生成文件名
+            parsed_url = urlparse(img_src)
+            file_extension = os.path.splitext(parsed_url.path)[1] or '.jpg'
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")[:-3]  # 毫秒級時間戳
+            filename = f"image_{timestamp}{file_extension}"
+            filepath = os.path.join(self.images_dir, filename)
+            
+            # 下載圖片
+            response = self.session.get(img_src, timeout=10)
+            response.raise_for_status()
+            
+            # 保存圖片
+            with open(filepath, 'wb') as f:
+                f.write(response.content)
+            
+            self.logger.info(f"圖片已下載: {filename}")
+            
+            return {
+                'filename': filename,
+                'filepath': filepath,
+                'url': img_src,
+                'alt': img_alt,
+                'size': len(response.content)
+            }
+            
+        except Exception as e:
+            self.logger.error(f"下載圖片時出錯: {str(e)}")
+            return None
+    
     def add_to_markdown(self, news_data):
         """將新聞數據添加到Markdown內容中"""
         try:
@@ -281,11 +359,21 @@ class TradingViewNewsSpider(scrapy.Spider):
             
             # 如果列表標題與面板標題不同，顯示列表標題
             if news_data['list_title'] != news_data['panel_title'] and news_data['list_title'] != "無標題":
-                self.markdown_content.append(f"**列表標題**: {news_data['list_title']}\n\n")
+                self.markdown_content.append(f"**Provider**: {news_data['list_title']}\n\n")
             
             # 新聞內容
             if news_data['content'] and news_data['content'] != "無內容":
                 self.markdown_content.append(f"**內容**:\n{news_data['content']}\n\n")
+            
+            # 圖片（如果有）
+            if news_data.get('images') and len(news_data['images']) > 0:
+                self.markdown_content.append(f"**圖片** ({len(news_data['images'])} 張):\n\n")
+                for i, img in enumerate(news_data['images'], 1):
+                    # 添加圖片到Markdown
+                    self.markdown_content.append(f"{i}. ![{img['alt']}]({img['filepath']})\n")
+                    if img['alt'] and img['alt'] != 'image':
+                        self.markdown_content.append(f"   - 描述: {img['alt']}\n")
+                    self.markdown_content.append(f"   - 文件: `{img['filename']}`\n")
             
             # 相關符號
             if news_data['symbols']:
@@ -304,10 +392,15 @@ class TradingViewNewsSpider(scrapy.Spider):
     def save_markdown_file(self):
         """保存Markdown文件"""
         try:
+            # 計算總圖片數量
+            total_images = sum([len(line.split('![')) - 1 for line in self.markdown_content if '![' in line])
+            
             # 添加文件結尾
             self.markdown_content.append(f"\n---\n")
             self.markdown_content.append(f"**報告生成時間**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
             self.markdown_content.append(f"**總共爬取**: {len([line for line in self.markdown_content if line.startswith('## ')])} 條新聞\n")
+            self.markdown_content.append(f"**總共下載**: {total_images} 張圖片\n")
+            self.markdown_content.append(f"**圖片保存目錄**: `{self.images_dir}/`\n")
             
             # 寫入文件
             with open(self.output_filename, 'w', encoding='utf-8') as f:
@@ -321,8 +414,10 @@ class TradingViewNewsSpider(scrapy.Spider):
     def closed(self, reason):
         """爬蟲結束時關閉瀏覽器"""
         self.driver.quit()
+        self.session.close()  # 關閉requests session
         self.logger.info("瀏覽器已關閉")
         self.logger.info(f"Markdown報告已保存至: {self.output_filename}")
+        self.logger.info(f"圖片已保存至目錄: {self.images_dir}/")
 
 
 # 運行腳本
@@ -338,7 +433,7 @@ if __name__ == "__main__":
             'format': 'json',
             'encoding': 'utf8',
             'store_empty': False,
-            'fields': ['index', 'list_title', 'panel_title', 'content', 'symbols', 'url'],
+            'fields': ['index', 'list_title', 'panel_title', 'content', 'images', 'symbols', 'url'],
             'indent': 2
         }
     })
@@ -357,4 +452,5 @@ if __name__ == "__main__":
     
     print(f"\n✅ 爬取完成！")
     print(f"📄 Markdown報告已保存")
+    print(f"🖼️ 圖片已保存至目錄")
     print(f"💾 JSON備份文件: tradingview_news_backup.json")
