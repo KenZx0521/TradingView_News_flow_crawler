@@ -1,4 +1,11 @@
         self.xpaths = {
+            # 登入頁面元素
+            'email_button': '/html/body/div[3]/div/div/div[1]/div/div[2]/div[2]/div/div/button',  # Email登入按鈕
+            'username_field': '//*[@id="id_username"]',  # 用戶名輸入框
+            'password_field': '//*[@id="id_password"]',  # 密碼輸入框
+            'login_button': '/html/body/div[3]/div/div/div[1]/div/div[2]/div[2]/div/div/div/form/button',  # 登入按鈕
+            
+            # 新聞頁面元素
             'news_list': '//*[@id="news-screener-page"]/div/div/div/div[1]/div/div[2]/div[2]/div[2]/div',  # 新聞列表容器的XPATH
             'news_items': '//*[@id="news-screener-page"]/div/div/div/div[1]/div/div[2]/div[2]/div[2]/div/a',  # 新聞項目的XPATH（可點擊的連結）
             'right_panel': '//*[@id="news-screener-page"]/div/div/div/div[3]',  # 右側面板的XPATH

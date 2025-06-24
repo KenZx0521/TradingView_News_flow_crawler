@@ -1,10 +1,7 @@
-# requirements.txt
-# scrapy
-# selenium
-# webdriver-manager
+import time
 
 import scrapy
-import time
+from scrapy.utils.project import get_project_settings
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -13,24 +10,29 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
+
 import json
 import os
+from dotenv import load_dotenv
 import requests
 from urllib.parse import urljoin, urlparse
 from datetime import datetime
 
 class TradingViewNewsSpider(scrapy.Spider):
     name = 'tradingview_news'
-    start_urls = ['https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT']
+    start_urls = ['https://www.tradingview.com/accounts/signin/'] # Login頁面
     
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
+        super(TradingViewNewsSpider, self).__init__(*args, **kwargs)
         # 設置Chrome選項
         chrome_options = Options()
-        chrome_options.add_argument('--headless')  # 無頭模式，如果需要看到瀏覽器運行請註釋掉
+        chrome_options.add_argument('--headless=new')
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--disable-dev-shm-usage')
-        chrome_options.add_argument('--disable-gpu')
-        chrome_options.add_argument('--window-size=1920,1080')
+        #chrome_options.add_argument('--disable-gpu')
+        chrome_options.add_argument("--window-size=1200,8000")
+        #chrome_options.add_argument("--start-fullscreen")
+        chrome_options.add_argument("--force-device-scale-factor=0.1")
         
         # 初始化WebDriver
         service = Service(ChromeDriverManager().install())
@@ -39,6 +41,13 @@ class TradingViewNewsSpider(scrapy.Spider):
         
         # XPATH路徑配置 - 請在此處填入您的XPATH
         self.xpaths = {
+            # 登入頁面元素
+            'email_button': '/html/body/div[3]/div/div/div[1]/div/div[2]/div[2]/div/div/button',  # Email登入按鈕
+            'username_field': '//*[@id="id_username"]',  # 用戶名輸入框
+            'password_field': '//*[@id="id_password"]',  # 密碼輸入框
+            'login_button': '/html/body/div[3]/div/div/div[1]/div/div[2]/div[2]/div/div/div/form/button',  # 登入按鈕
+            
+            # 新聞頁面元素
             'news_list': '//*[@id="news-screener-page"]/div/div/div/div[1]/div/div[2]/div[2]/div[2]/div',  # 新聞列表容器的XPATH
             'news_items': '//*[@id="news-screener-page"]/div/div/div/div[1]/div/div[2]/div[2]/div[2]/div/a',  # 新聞項目的XPATH（可點擊的連結）
             'right_panel': '//*[@id="news-screener-page"]/div/div/div/div[3]',  # 右側面板的XPATH
@@ -49,6 +58,15 @@ class TradingViewNewsSpider(scrapy.Spider):
             'list_title': '//*[@id="news-screener-page"]/div/div/div/div[1]/div/div[2]/div[2]/div[2]/div/a[1]/article/div/div'  # 列表中標題的XPATH（相對於news_items）
         }
         
+        # 登入憑證 - 請設置您的登入資訊
+        load_dotenv()
+        self.credentials = {
+            'username': os.getenv('USERNAME'),
+            'password': os.getenv('PASSWORD')
+        }
+        
+        
+
         # 初始化Markdown輸出
         self.markdown_content = []
         self.output_filename = f'tradingview_news_{datetime.now().strftime("%Y%m%d_%H%M%S")}.md'
@@ -64,13 +82,94 @@ class TradingViewNewsSpider(scrapy.Spider):
         })
         
     def parse(self, response):
-        """主要解析函數"""
+        """主要解析函數 - 從登入頁面開始"""
         self.driver.get(response.url)
         
+        try:
+            # 執行自動登入
+            if self.perform_login():
+                self.logger.info("登入成功，導向新聞頁面")
+                # 導向新聞頁面
+                news_url = 'https://www.tradingview.com/news-flow/?symbol=BINANCE:BTCUSDT'
+                self.driver.get(news_url)
+                
+                # 開始新聞爬取流程
+                self.scrape_news()
+            else:
+                self.logger.error("登入失敗，無法繼續爬取")
+                return
+                
+        except Exception as e:
+            self.logger.error(f"爬取過程中出錯: {str(e)}")
+        
+        # 保存Markdown文件
+        self.save_markdown_file()
+    
+    def perform_login(self):
+        """執行自動登入"""
+        try:
+            self.logger.info("開始執行自動登入...")
+            
+            # 檢查登入憑證
+            if not self.credentials['username'] or not self.credentials['password']:
+                self.logger.error("請在 credentials 中設置用戶名和密碼")
+                return False
+            
+            # 等待頁面加載
+            time.sleep(1.5)
+            
+            # 1. 點擊Email登入按鈕
+            email_button = self.wait.until(
+                EC.element_to_be_clickable((By.XPATH, self.xpaths['email_button']))
+            )
+            email_button.click()
+            self.logger.info("已點擊Email登入按鈕")
+            time.sleep(1)
+            
+            # 2. 填入用戶名
+            username_field = self.wait.until(
+                EC.presence_of_element_located((By.XPATH, self.xpaths['username_field']))
+            )
+            username_field.clear()
+            username_field.send_keys(self.credentials['username'])
+            self.logger.info("已填入用戶名")
+            
+            # 3. 填入密碼
+            password_field = self.driver.find_element(By.XPATH, self.xpaths['password_field'])
+            password_field.clear()
+            password_field.send_keys(self.credentials['password'])
+            self.logger.info("已填入密碼")
+            
+            # 4. 點擊登入按鈕
+            login_button = self.driver.find_element(By.XPATH, self.xpaths['login_button'])
+            login_button.click()
+            self.logger.info("已點擊登入按鈕")
+            
+            # 等待登入完成 - 檢查是否跳轉到主頁面
+            time.sleep(5)
+            
+            # 檢查是否登入成功（可以通過URL變化或特定元素來判斷）
+            current_url = self.driver.current_url
+            if 'signin' not in current_url:
+                self.logger.info("登入成功！")
+                return True
+            else:
+                self.logger.error("登入失敗，仍在登入頁面")
+                return False
+                
+        except TimeoutException:
+            self.logger.error("登入頁面元素加載超時")
+            return False
+        except Exception as e:
+            self.logger.error(f"登入過程中出錯: {str(e)}")
+            return False
+    
+    def scrape_news(self):
+        """爬取新聞的主要流程"""
         # 初始化Markdown文件標題
         self.markdown_content.append(f"# TradingView BTCUSDT 新聞報告\n")
         self.markdown_content.append(f"**爬取時間**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        self.markdown_content.append(f"**來源**: {response.url}\n\n")
+        self.markdown_content.append(f"**來源**: {self.driver.current_url}\n\n")
         self.markdown_content.append("---\n\n")
         
         try:
@@ -100,7 +199,7 @@ class TradingViewNewsSpider(scrapy.Spider):
                     self.driver.execute_script("arguments[0].click();", news_item)
                     
                     # 等待右側面板加載
-                    time.sleep(2)
+                    time.sleep(0.5)
                     
                     # 提取新聞詳細內容
                     news_data = self.extract_news_details(title, index)
@@ -108,7 +207,7 @@ class TradingViewNewsSpider(scrapy.Spider):
                     if news_data:
                         # 添加到Markdown內容
                         self.add_to_markdown(news_data)
-                        yield news_data
+                        # 如果需要yield數據給Scrapy框架，可以在這裡添加
                     
                     # 關閉右側面板
                     self.close_right_panel()
@@ -118,12 +217,9 @@ class TradingViewNewsSpider(scrapy.Spider):
                     continue
                     
         except TimeoutException:
-            self.logger.error("頁面加載超時")
+            self.logger.error("新聞頁面加載超時")
         except Exception as e:
-            self.logger.error(f"爬取過程中出錯: {str(e)}")
-        
-        # 保存Markdown文件
-        self.save_markdown_file()
+            self.logger.error(f"爬取新聞過程中出錯: {str(e)}")
     
     def scroll_and_load_news(self):
         """滾動頁面加載更多新聞"""
@@ -132,7 +228,7 @@ class TradingViewNewsSpider(scrapy.Spider):
         while True:
             # 滾動到頁面底部
             self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            time.sleep(3)  # 等待加載
+            time.sleep(1)  # 等待加載
             
             # 計算新的頁面高度
             new_height = self.driver.execute_script("return document.body.scrollHeight")
@@ -292,17 +388,17 @@ class TradingViewNewsSpider(scrapy.Spider):
                 # 使用設置的關閉按鈕XPATH
                 close_btn = self.driver.find_element(By.XPATH, self.xpaths['close_button'])
                 close_btn.click()
-                time.sleep(1)
+                time.sleep(0.5)
                 return
             
             # 如果沒有設置關閉按鈕XPATH，點擊面板外部區域
             self.driver.execute_script("document.body.click();")
-            time.sleep(1)
+            time.sleep(0.5)
             
         except NoSuchElementException:
             # 如果找不到關閉按鈕，嘗試點擊頁面其他區域
             self.driver.execute_script("document.body.click();")
-            time.sleep(1)
+            time.sleep(0.5)
         except Exception as e:
             self.logger.error(f"關閉右側面板時出錯: {str(e)}")
     
@@ -442,7 +538,7 @@ if __name__ == "__main__":
     settings.set('USER_AGENT', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
     
     # 設置下載延遲
-    settings.set('DOWNLOAD_DELAY', 2)
+    settings.set('DOWNLOAD_DELAY', 1)
     settings.set('RANDOMIZE_DOWNLOAD_DELAY', True)
     
     # 創建爬蟲進程
